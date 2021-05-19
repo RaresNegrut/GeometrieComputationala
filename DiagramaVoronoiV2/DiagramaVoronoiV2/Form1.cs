@@ -16,6 +16,7 @@ namespace DiagramaVoronoiV2
         private void Form1_Load(object sender, System.EventArgs e)
         {
             Renderer.InitGraph(pictureBox1);
+            this.BackColor = Color.Aquamarine;
         }
 
         private void button1_Click(object sender, System.EventArgs e)

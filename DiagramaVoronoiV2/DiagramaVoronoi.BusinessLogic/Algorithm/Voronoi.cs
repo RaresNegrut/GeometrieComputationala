@@ -27,7 +27,7 @@ namespace DiagramaVoronoi.BusinessLogic
             int poz = 0;
             for (int i = 1; i < Points.Count; i++)
             {
-                float dcrt = EuclideanDistance(T, Points[i].GetPoint());
+                float dcrt = ChebyshevDistance(T, Points[i].GetPoint());
                 if (dMin > dcrt)
                 {
                     dMin = dcrt;
@@ -44,13 +44,11 @@ namespace DiagramaVoronoi.BusinessLogic
         {
             return (float)(Math.Abs(A.X - B.X) + Math.Abs(A.Y - B.Y));
         }
-        public static float CebasevDistance(System.Drawing.PointF A, System.Drawing.PointF B)
+        public static float ChebyshevDistance(System.Drawing.PointF A, System.Drawing.PointF B)
         {
             float dX = Math.Abs(A.X - B.X);
             float dY = Math.Abs(A.Y - B.Y);
-            if (dX > dY)
-                return dX;
-            return dY;
+            return Math.Max(dX, dY);
         }
     }
 }

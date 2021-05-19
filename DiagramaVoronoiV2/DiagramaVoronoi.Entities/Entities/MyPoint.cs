@@ -4,7 +4,8 @@ namespace DiagramaVoronoi.Entities
 {
     public class MyPoint
     {
-        public static Random RandomColor = new Random();
+        static Random RandomColor = new Random();
+        static Random RandomCoordinate = new Random();
         public static Point DrawableSurface { get; set; } = Renderer.Renderer.GetDrawableSurface();
         public static int Size { get; private set; } = 5;
         public float X { get; private set; }
@@ -30,7 +31,7 @@ namespace DiagramaVoronoi.Entities
         }
         public static PointF GetRandomPoint()
         {
-            Random RandomCoordinate = new Random();
+            
             PointF RandomPoint = new PointF(RandomCoordinate.Next(DrawableSurface.X),RandomCoordinate.Next(DrawableSurface.Y));
             return RandomPoint;
         }

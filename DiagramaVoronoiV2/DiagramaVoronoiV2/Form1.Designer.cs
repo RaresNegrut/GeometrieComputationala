@@ -48,9 +48,10 @@ namespace DiagramaVoronoiV2
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Menu;
-            this.button1.Location = new System.Drawing.Point(758, 22);
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(735, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 32);
+            this.button1.Size = new System.Drawing.Size(239, 140);
             this.button1.TabIndex = 1;
             this.button1.Text = "RandomPoints";
             this.button1.UseVisualStyleBackColor = false;
@@ -59,9 +60,10 @@ namespace DiagramaVoronoiV2
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Menu;
-            this.button2.Location = new System.Drawing.Point(758, 98);
+            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button2.Location = new System.Drawing.Point(735, 295);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 32);
+            this.button2.Size = new System.Drawing.Size(239, 122);
             this.button2.TabIndex = 2;
             this.button2.Text = "Draw";
             this.button2.UseVisualStyleBackColor = false;
@@ -70,9 +72,10 @@ namespace DiagramaVoronoiV2
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.Menu;
-            this.button3.Location = new System.Drawing.Point(758, 60);
+            this.button3.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button3.Location = new System.Drawing.Point(735, 158);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 32);
+            this.button3.Size = new System.Drawing.Size(239, 131);
             this.button3.TabIndex = 3;
             this.button3.Text = "PointsFromFile";
             this.button3.UseVisualStyleBackColor = false;
@@ -81,9 +84,10 @@ namespace DiagramaVoronoiV2
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.Menu;
-            this.button4.Location = new System.Drawing.Point(758, 136);
+            this.button4.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button4.Location = new System.Drawing.Point(735, 423);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(122, 32);
+            this.button4.Size = new System.Drawing.Size(239, 134);
             this.button4.TabIndex = 4;
             this.button4.Text = "PictureBoxClear";
             this.button4.UseVisualStyleBackColor = false;
@@ -93,7 +97,8 @@ namespace DiagramaVoronoiV2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 569);
+            this.BackColor = System.Drawing.Color.Aqua;
+            this.ClientSize = new System.Drawing.Size(986, 569);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
