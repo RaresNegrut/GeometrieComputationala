@@ -21,7 +21,7 @@ namespace DiagramaVoronoiV2
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            Voronoi.InitializeRealm(20);
+            Voronoi.InitializeRealm(10);
             Voronoi.DrawRealm();
         }
 
@@ -50,6 +50,30 @@ namespace DiagramaVoronoiV2
         {
             Voronoi.Points = File.LoadFile(@"..\..\Points.txt");
             Voronoi.DrawRealm();
+        }
+
+        private void button5_Click(object sender, System.EventArgs e)
+        {
+            string[] point = richTextBox1.Text.Split(' ');
+            MyPoint minPoint = new MyPoint();
+
+            MyPoint MyPoint = new MyPoint(float.Parse(point[0]), float.Parse(point[1]));
+            MyPoint.Draw();
+
+            float minDistance = float.MaxValue;
+
+            for (int i = 0; i < Voronoi.Points.Count; i++)
+            {
+                float distance = Voronoi.EuclideanDistance(Voronoi.Points[i].GetPoint(), MyPoint.GetPoint());
+                if (distance < minDistance)
+                {
+                    minPoint = Voronoi.Points[i];
+                    minDistance = distance;
+                }
+            }
+            richTextBox2.Text = $"{minDistance}";
+            Renderer.grp.DrawLine(Pens.Black, minPoint.GetPoint(), MyPoint.GetPoint());
+            Renderer.RefreshGraph();
         }
     }
 }

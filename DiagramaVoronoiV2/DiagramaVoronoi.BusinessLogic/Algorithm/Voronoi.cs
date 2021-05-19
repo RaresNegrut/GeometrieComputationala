@@ -27,7 +27,7 @@ namespace DiagramaVoronoi.BusinessLogic
             int poz = 0;
             for (int i = 1; i < Points.Count; i++)
             {
-                float dcrt = ChebyshevDistance(T, Points[i].GetPoint());
+                float dcrt = EuclideanDistance(T, Points[i].GetPoint());
                 if (dMin > dcrt)
                 {
                     dMin = dcrt;
